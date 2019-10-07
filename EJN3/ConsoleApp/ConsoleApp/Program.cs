@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace ConsoleApp
 {
@@ -6,7 +7,25 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Auto miAuto = new Auto();
+            
         }
+    }
+
+    public class Auto
+    {
+        string nombre;
+
+        public Auto(){
+
+            Debug.WriteLine("Nuevo auto");
+
+        }
+
+        public void Acelerar(){
+
+        }
+
     }
 }
