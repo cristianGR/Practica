@@ -7,24 +7,31 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            Auto[] garage = new Auto[10];
 
-            Auto miAuto = new Auto();
-            
+            Auto electrico = new Auto("Electrico 1");
+            electrico.Acelerar();
+ 
         }
     }
 
-    public class Auto
+    class Auto
     {
-        string nombre;
+        string Nombre;
+        int Velocidad;
 
-        public Auto(){
-
-            Debug.WriteLine("Nuevo auto");
-
+        public Auto(string nombre){
+            Nombre = nombre;
+            Velocidad = 0;
         }
 
-        public void Acelerar(){
 
+        public void Acelerar(){
+            int MaxVel = 100;
+            Console.WriteLine("Velocidad: " + Velocidad);
+                Velocidad++;
+            if (Velocidad == MaxVel) return;
+                Acelerar();
         }
 
     }
